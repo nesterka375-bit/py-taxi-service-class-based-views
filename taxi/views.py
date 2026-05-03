@@ -40,5 +40,3 @@ class DriverListView(generic.ListView):
 class DriverDetailView(generic.DetailView):
     model = Driver
     queryset = Driver.objects.prefetch_related("cars__manufacturer")
-    slug_field = "username"
-    slug_url_kwarg = "username"
